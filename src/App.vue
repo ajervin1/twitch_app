@@ -1,8 +1,8 @@
 <template>
 	<main id="app" class="">
+		<h2>Hello world</h2>
 		<!--Router view-->
 		<router-view></router-view>
-
 	</main>
 </template>
 
