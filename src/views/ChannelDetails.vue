@@ -1,9 +1,7 @@
 <template>
 	<main>
-		<h2>Channel Details</h2>
 		<!--Channel Details-->
-		<div class="profile-banner"
-		     :style="{backgroundImage:`url(${channel.profile_banner})`}"></div>
+	
 		<!--Channel-->
 		<article class="channel no-gutters align-items-center d-flex py-4">
 			<div class="col-2 pr-4 mr-4">
@@ -11,14 +9,14 @@
 			</div>
 			<!--Channel Details-->
 			<div class="channel-details text-white mr-auto">
-				<div class="font-weight-normal display-4 text-white">{{ channel.display_name }}
+				<div class="font-weight-normal display-4 text-primary">{{ channel.display_name }}
 				</div>
 				<div>Followers: {{ channel.followers }}</div>
 				<div>{{ channel.description }}</div>
 			</div>
 			<!--Filter Options-->
 			<div class="d-flex align-items-center col-4">
-				<label class="text-white pr-2">Filter By</label>
+				<label class="text-white pr-2">Filter Media</label>
 				<select class="form-control w-75" v-model="filterBy">
 					<option value="" selected disabled>Select Media</option>
 					<option value="clips">clips</option>
@@ -46,7 +44,7 @@
 		data () {
 			return {
 				channel: null,
-				filterBy: ''
+				filterBy: 'videos'
 			}
 		},
 		async created () {

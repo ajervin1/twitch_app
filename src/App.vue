@@ -1,19 +1,21 @@
 <template>
 	<main id="app" class="">
-		<h2>Halleluhiag</h2>
+		<NavBar />
 		<!--Router view-->
 		<router-view></router-view>
 	</main>
 </template>
 
 <script lang="ts">
-	import Vue from 'vue';
-	
-	export default Vue.extend({
-		name: 'App',
-		data() {
-			return {}
-		},
-	});
+import Vue from 'vue';
+import NavBar from "./components/NavBar.vue";
+
+export default Vue.extend( {
+	name: 'App',
+	components: { NavBar },
+	data() {
+		return {}
+	},
+} );
 </script>
 

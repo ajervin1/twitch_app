@@ -1,15 +1,21 @@
 <template>
 	<main>
-		<h2>Channel Videos</h2>
-		<div class="w-25 mb-4 d-flex align-items-center">
-			<label class="text-white pr-2">
-				Sort By
-			</label>
-			<select class="form-control w-75" v-model="sortBy">
-				<option value="time">Date</option>
-				<option value="views">Popular</option>
-			</select>
+		<div class="details-top py-4 d-flex justify-content-between align-items-center">
+			<h2 class="text-secondary">Channel Videos</h2>
+			<!--Sort By Option-->
+			<div class="w-25 mb-4 d-flex align-items-center">
+				<label class="text-white pr-2">
+					Sort By
+				</label>
+				<select class="form-control w-75" v-model="sortBy">
+					<option value="time">Date</option>
+					<option value="views">Popular</option>
+				</select>
+			</div>
+			<!--Sort By Options-->
 		</div>
+	
+
 		<!--Channel Videos-->
 		<div class="row">
 			<div class="col-4 mb-4 font-size-sm" v-for="video in videos">
@@ -35,24 +41,24 @@
 </template>
 
 <script>
-	import { getChannelVideos } from '../service'
-	
-	export default {
-		name: 'VideoList',
-		data () {
-			return {
-				videos: [],
-				sortBy: 'time'
-			}
-		},
-		async created () {
-			this.videos = await getChannelVideos(this.$route.params.channelId, this.sortBy);
-		},
-		watch: {
-			async sortBy (newval) {
-				this.videos = await getChannelVideos(this.$route.params.channelId, this.sortBy);
-			}
+import { getChannelVideos } from '../service'
+
+export default {
+	name: 'VideoList',
+	data () {
+		return {
+			videos: [],
+			sortBy: 'time'
 		}
-		
+	},
+	async created () {
+		this.videos = await getChannelVideos ( this.$route.params.channelId, this.sortBy );
+	},
+	watch: {
+		async sortBy ( newval ) {
+			this.videos = await getChannelVideos ( this.$route.params.channelId, this.sortBy );
+		}
 	}
+	
+}
 </script>

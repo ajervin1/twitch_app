@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<h2>Channel Videos</h2>
+	
 		<!--Channel Videos-->
 		<div class="row">
 			<div class="col-4 mb-4" v-for="video in videos">

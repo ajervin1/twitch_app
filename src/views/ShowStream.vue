@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<h2>Show Stream</h2>
+		<h2 class="text-white py-3">Show Stream</h2>
 		<!-- Add a placeholder for the Twitch embed -->
 		<div id="twitch-embed">
 		

@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<h2>Show Video</h2>
+		<h2 class="text-white py-4">Show Video</h2>
 		<!--Show Twitch Video-->
 		<div id="twitch-embed"></div>
 	</main>

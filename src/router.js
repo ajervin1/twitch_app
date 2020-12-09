@@ -2,19 +2,20 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home'
 import Streams from './views/Streams'
-import SearchPage from './views/SearchPage'
+
 import ChannelDetails from './views/ChannelDetails'
 import ChannelVideos from './views/ChannelVideos'
 import ChannelClips from './views/ChannelClips'
 import ShowStream from './views/ShowStream'
 import ShowVideo from './views/ShowVideo'
+import SearchResults from "./views/SearchResults";
 
 
 
-Vue.use(Router)
+Vue.use ( Router )
 
 
-const router = new Router({
+const router = new Router ( {
 	mode: 'history',
 	routes: [
 		{
@@ -26,6 +27,10 @@ const router = new Router({
 			component: ShowVideo
 		},
 		{
+			path: '/searchResults',
+			component: SearchResults
+		},
+		{
 			path: '/stream/:channelName',
 			component: ShowStream
 		},
@@ -33,10 +38,7 @@ const router = new Router({
 			path: '/streams/:game',
 			component: Streams
 		},
-		{
-			path: '/search',
-			component: SearchPage
-		},
+		
 		{
 			path: '/channels/:channelId',
 			component: ChannelDetails
@@ -51,6 +53,6 @@ const router = new Router({
 			component: ChannelClips
 		}
 	]
-})
+} )
 
 export default router
