@@ -1,6 +1,6 @@
 <template>
 	<main id="app" class="">
-		<h2>Hello world</h2>
+		<h2>Halleluhiag</h2>
 		<!--Router view-->
 		<router-view></router-view>
 	</main>

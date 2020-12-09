@@ -28,11 +28,10 @@
 						<div><strong>Game: </strong>{{ clip.game}}</div>
 						<div><strong>Created: </strong>{{ clip.created_at | formatDate}}</div>
 					</div>
-					
+				
 				</article>
 			</div>
 		</section>
-		
 		<!--Clips List-->
 	</main>
 </template>
