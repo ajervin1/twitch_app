@@ -8,6 +8,6 @@
 babel.config.js
 package-lock.json
 package.json
-public/
+
 
 tsconfig.json
